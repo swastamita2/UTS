@@ -1,0 +1,36 @@
+#include <iostream>
+#include <queue>
+using namespace std;
+
+// Print the queue
+void showq(queue<int> gq) //fungsi untuk mencetak elemen dalam queue 
+{
+	queue<int> g = gq;
+	while (!g.empty()) {
+		cout << ' ' << g.front();
+		g.pop();
+			}
+			cout << ' ';
+}
+
+// Driver Code
+int main ()
+{
+	queue<int> gquiz; //dalam variabel gquiz
+	gquiz.push(10);
+	gquiz.push(15);
+	gquiz.push(20);
+	
+	cout << "The Queue gquix is:";
+	showq(gquiz);
+	
+	cout << "\ngquiz.size() : "<< gquiz.size();
+	cout << "\ngquiz.front(): "<< gquiz.front();
+	cout << "\ngquiz.back() : "<< gquiz.back();
+	
+	cout << "\ngquiz.pop()  :";
+	gquiz.pop();
+	showq(gquiz);
+	
+	return 0;
+}
