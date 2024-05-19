@@ -1,0 +1,35 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main (){
+	//membuat stack yang bertipe data string
+	stack<int> angka;
+	//menambahkan elemen ke stack
+	angka.push(10);
+	angka.push(15);
+	angka.push(20);
+	
+	cout << "Isi stack :\n";
+	stack<int>tempStack = angka; //salin isi stack ke stack sementara
+	
+	while (!tempStack.empty()){
+		cout << tempStack.top() << endl;
+		tempStack.pop();
+ 	}
+ 	cout << endl;
+ 	
+ 	if(!angka.empty()){
+ 		cout << "data yang akan dihapus: " << angka.top() << endl;
+	 }else {
+	 	cout << "Stack sudah kosong" << endl;
+	 	return 0;
+	 }
+	 //menghapus elemen teratas dari stack
+	 angka.pop();
+	 cout << "\nIsi stack setelah penghapusan:\n";
+	 while (!angka.empty()){
+	 	cout << angka.top()<<endl;
+	 	angka.pop();
+	 }
+}
