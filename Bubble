@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+void a(int x[], int n){
+	for(int i = n -1; i > 0; i--){
+		for(int j = 0; j < i; j++) {
+		if(x[j] > x[j + 1]){
+			int temp = x[j];
+			x[j] = x[j + 1];
+			x[j + 1] = temp;	
+			}
+		}
+	}
+}
+int main(){
+	
+	int angka[] = {1, 3, 2, 4, 5};
+	int n = sizeof(angka) / sizeof(int);
+	a(angka, n);
+	for(int i = 0; i < n; i++){
+		cout << angka[i] << " ";
+	}
+	cout << endl;
+	return 0;
+}
